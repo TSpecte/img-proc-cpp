@@ -1,0 +1,3 @@
+Pour compiler avec  Magick++ :
+
+g++ `Magick++-config --cxxflags --cppflags` -o test main.cpp `Magick++-config --ldflags --libs`

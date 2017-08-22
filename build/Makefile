@@ -123,6 +123,60 @@ prog/fast:
 	$(MAKE) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/build
 .PHONY : prog/fast
 
+src/Edge.o: src/Edge.cpp.o
+
+.PHONY : src/Edge.o
+
+# target to build an object file
+src/Edge.cpp.o:
+	$(MAKE) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/Edge.cpp.o
+.PHONY : src/Edge.cpp.o
+
+src/Edge.i: src/Edge.cpp.i
+
+.PHONY : src/Edge.i
+
+# target to preprocess a source file
+src/Edge.cpp.i:
+	$(MAKE) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/Edge.cpp.i
+.PHONY : src/Edge.cpp.i
+
+src/Edge.s: src/Edge.cpp.s
+
+.PHONY : src/Edge.s
+
+# target to generate assembly for a file
+src/Edge.cpp.s:
+	$(MAKE) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/Edge.cpp.s
+.PHONY : src/Edge.cpp.s
+
+src/Graph.o: src/Graph.cpp.o
+
+.PHONY : src/Graph.o
+
+# target to build an object file
+src/Graph.cpp.o:
+	$(MAKE) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/Graph.cpp.o
+.PHONY : src/Graph.cpp.o
+
+src/Graph.i: src/Graph.cpp.i
+
+.PHONY : src/Graph.i
+
+# target to preprocess a source file
+src/Graph.cpp.i:
+	$(MAKE) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/Graph.cpp.i
+.PHONY : src/Graph.cpp.i
+
+src/Graph.s: src/Graph.cpp.s
+
+.PHONY : src/Graph.s
+
+# target to generate assembly for a file
+src/Graph.cpp.s:
+	$(MAKE) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/Graph.cpp.s
+.PHONY : src/Graph.cpp.s
+
 src/Image.o: src/Image.cpp.o
 
 .PHONY : src/Image.o
@@ -149,6 +203,33 @@ src/Image.s: src/Image.cpp.s
 src/Image.cpp.s:
 	$(MAKE) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/Image.cpp.s
 .PHONY : src/Image.cpp.s
+
+src/Noeud.o: src/Noeud.cpp.o
+
+.PHONY : src/Noeud.o
+
+# target to build an object file
+src/Noeud.cpp.o:
+	$(MAKE) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/Noeud.cpp.o
+.PHONY : src/Noeud.cpp.o
+
+src/Noeud.i: src/Noeud.cpp.i
+
+.PHONY : src/Noeud.i
+
+# target to preprocess a source file
+src/Noeud.cpp.i:
+	$(MAKE) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/Noeud.cpp.i
+.PHONY : src/Noeud.cpp.i
+
+src/Noeud.s: src/Noeud.cpp.s
+
+.PHONY : src/Noeud.s
+
+# target to generate assembly for a file
+src/Noeud.cpp.s:
+	$(MAKE) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/src/Noeud.cpp.s
+.PHONY : src/Noeud.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -213,9 +294,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... prog"
+	@echo "... src/Edge.o"
+	@echo "... src/Edge.i"
+	@echo "... src/Edge.s"
+	@echo "... src/Graph.o"
+	@echo "... src/Graph.i"
+	@echo "... src/Graph.s"
 	@echo "... src/Image.o"
 	@echo "... src/Image.i"
 	@echo "... src/Image.s"
+	@echo "... src/Noeud.o"
+	@echo "... src/Noeud.i"
+	@echo "... src/Noeud.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/prog.dir/src/Edge.cpp.o"
+  "CMakeFiles/prog.dir/src/Graph.cpp.o"
   "CMakeFiles/prog.dir/src/Image.cpp.o"
+  "CMakeFiles/prog.dir/src/Noeud.cpp.o"
   "CMakeFiles/prog.dir/src/main.cpp.o"
   "CMakeFiles/prog.dir/src/utils.cpp.o"
   "prog.pdb"

@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+/home/dude/Documents/Projets/ip_cpp/Test/src/Edge.cpp
+Edge.hpp
+/home/dude/Documents/Projets/ip_cpp/Test/src/Edge.hpp
+
+/home/dude/Documents/Projets/ip_cpp/Test/src/Edge.hpp
+stdint.h
+/home/dude/Documents/Projets/ip_cpp/Test/src/stdint.h
+cassert
+-
+vector
+-
+
+/home/dude/Documents/Projets/ip_cpp/Test/src/Graph.cpp
+
 /home/dude/Documents/Projets/ip_cpp/Test/src/Image.cpp
 Image.hpp
 /home/dude/Documents/Projets/ip_cpp/Test/src/Image.hpp
@@ -22,6 +36,24 @@ cstring
 limits
 -
 
+/home/dude/Documents/Projets/ip_cpp/Test/src/Noeud.cpp
+Noeud.hpp
+/home/dude/Documents/Projets/ip_cpp/Test/src/Noeud.hpp
+iostream
+-
+
+/home/dude/Documents/Projets/ip_cpp/Test/src/Noeud.hpp
+stdint.h
+/home/dude/Documents/Projets/ip_cpp/Test/src/stdint.h
+Edge.hpp
+/home/dude/Documents/Projets/ip_cpp/Test/src/Edge.hpp
+iostream
+-
+cassert
+-
+vector
+-
+
 /home/dude/Documents/Projets/ip_cpp/Test/src/main.cpp
 stdio.h
 -
@@ -29,10 +61,18 @@ cassert
 -
 opencv2/opencv.hpp
 -
+string
+-
+vector
+-
 Image.hpp
 /home/dude/Documents/Projets/ip_cpp/Test/src/Image.hpp
 utils.hpp
 /home/dude/Documents/Projets/ip_cpp/Test/src/utils.hpp
+Edge.hpp
+/home/dude/Documents/Projets/ip_cpp/Test/src/Edge.hpp
+Noeud.hpp
+/home/dude/Documents/Projets/ip_cpp/Test/src/Noeud.hpp
 
 /home/dude/Documents/Projets/ip_cpp/Test/src/utils.cpp
 utils.hpp

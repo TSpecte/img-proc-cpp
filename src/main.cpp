@@ -21,9 +21,18 @@ int main(int argc, char** argv )
     string path2img = "/home/dude/Documents/Projets/ip_cpp/Test/resource/clem.jpg";
 
     Mat image;
-    image = imread( path2img, 1 );
-    info(image);
+    // image = imread( path2img, 1 );
+    // info(image);
 
+    image = Mat::zeros(50,50,CV_8U);
+    //Little drawing
+    for (int i=image.rows/2-10; i<image.rows/2+10; ++i){
+        for (int j=image.cols/2-5; j<image.cols/2+5; ++j){
+            image.at<Vec3b>(i,j)[0]=250;
+            image.at<Vec3b>(i,j)[1]=250;
+            image.at<Vec3b>(i,j)[2]=250;
+        }
+    }// end of little drawing
     Mat imout = Mat::zeros(image.rows, image.cols, CV_8U);
     color2grey(image, imout); // custom function
 
@@ -42,24 +51,18 @@ int main(int argc, char** argv )
     //**************************************************************************************
 
     im2 /= 2;
-    int imW = 4;//im2.width();
-    int imH = 3;//im2.height(); 
+    int imW = im2.width();
+    int imH = im2.height(); 
 
+    //**************************************************************************************
     // 1. Initialisation du graphe et des arcs
+    //**************************************************************************************
     int graphSize = imW*imH;
     int edgesNb   = 2*imW*imH - imH - imW;
 
-
     Noeud graphe[graphSize];
-    //Noeud * graphe = (Noeud*) malloc(sizeof(Noeud)*graphSize); // Ces deux tab stockent les vrais Node/Edge
-    Edge edges[edgesNb];
-    //Edge * edges = (Edge*) malloc(sizeof(Edge)*edgesNb);
-
-    for(int i=0; i<graphSize; i++) // Init des noeuds 
-        graphe[i].index  = i;
+    Edge edges[edgesNb + 2*graphSize]; // edgesNb(n-links) + 2*graphSize(st-links)
    
-    for (int i = 0; i < edgesNb; ++i) // Init des arcs
-        edges[i].index = i;
     //**************************************************************************************
     // 1.1 Association des noeuds et des arcs
     //**************************************************************************************
@@ -73,7 +76,6 @@ int main(int argc, char** argv )
             ++index_edges;
         }
     }
-
     // Creation des arcs verticaux
     for(int i=0; i<imH-1; ++i){
         for(int j=0; j<imW; ++j){
@@ -82,18 +84,31 @@ int main(int argc, char** argv )
             ++index_edges;
         }
     }
+    // Creation des arcs entre noeuds et {s,t}
+    STNoeud source(graphSize, graphSize+2, 0);
+    STNoeud tank  (graphSize,           0, 0);
+    for(int i=0; i<imH; ++i){
+        for(int j=0; j<imW; ++j){
+            index_node = i*imW + j;
+            source.setEdge(&(edges[index_edges]), &(graphe[index_node]));
+            ++index_edges;
+            tank.  setEdge(&(edges[index_edges]), &(graphe[index_node]));
+            ++index_edges;
+        }
+    }
 
     //**************************************************************************************
     // 2. Attribuer un poids a tous les arcs
     //**************************************************************************************
 
-    for(int i=0; i<edgesNb; i++)
-        edges[i].capacity = i;
+    // for(int i=0; i<edgesNb; i++)
+    //     edges[i].capacity = 1;
 
  
     //**************************************************************************************
     // 3. Attribuer une hauteur à tous les noeuds (+ source + puit)
     //**************************************************************************************
+
 
 
 
